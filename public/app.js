@@ -22,7 +22,7 @@ $.getJSON("/articles", function(data) {
         $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
         $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
         $("#notes").prepend("<p>" + data.note.body + "</p>");
-        $("#notes").prepend("<h6> Note Title: " + data.note.title + "</h6>");
+        $("#notes").prepend("<h6><u>Note Title: </u>" + data.note.title + "</h6>");
         if (data.note) {
           $("#titleinput").val(data.note.title);
           $("#bodyinput").val(data.note.body);
