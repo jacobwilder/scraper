@@ -2,17 +2,30 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <title>Futurism Scraper</title>
   </head>
   <body>
     <div id="wrapper">
-      <h1>Futurism</h1>
-      <h2><i>noun</i></h2>
-        <h3> An artistic movement begun in Italy in 1909 that violently rejected traditional forms so as to celebrate
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Futurism</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/scrape">Scrape</a>
+                <a class="nav-item nav-link" href="/articles">Articles</a>
+              </div>
+            </div>
+          </nav>
+      
+        <p> <strong><i>noun</i></strong> -An artistic movement begun in Italy in 1909 that violently rejected traditional forms so as to celebrate
              and incorporate into art the energy and dynamism of modern technology. Launched by Filippo Marinetti, it 
              had effectively ended by 1918 but was widely influential, particularly in Russia on figures such as Malevich
-              and Mayakovsky.</h3>
+              and Mayakovsky.</p>
       <div id="articles"></div>
       <div id="notes"></div>
     </div>

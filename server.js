@@ -13,7 +13,9 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/scraperdb", { useNewUrlParser: true });
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scraperdb"
+
+mongoose.connect(MONGODB_URI);
 
 // Route for scraping all Articles from link
 app.get("/scrape", function(req, res) {
