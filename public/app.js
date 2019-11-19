@@ -16,11 +16,13 @@ $.getJSON("/articles", function(data) {
       // Adds note information to the page
       .then(function(data) {
         console.log(data);
-        $("#notes").append("<h2>" + data.title + "</h2>");
+        $("#notes").append("<h2><u>Leave a note!</u></h2>")
+        $("#notes").append("<h3>" + data.title + "</h3>");
         $("#notes").append("<input id='titleinput' name='title' >");
         $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
         $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
-  
+        $("#notes").prepend("<p>" + data.note.body + "</p>");
+        $("#notes").prepend("<h6> Note Title: " + data.note.title + "</h6>");
         if (data.note) {
           $("#titleinput").val(data.note.title);
           $("#bodyinput").val(data.note.body);
